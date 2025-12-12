@@ -205,8 +205,10 @@ body {font-family: "Poppins", sans-serif !important;
     </DIV>
     </div>
   <div class="main">
+      
        
-    <form id="myForm" method="post">
+    <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
+       <input type="hidden" name="access_key" value="50e894f4-cb86-4acd-88df-b78f50bf246b">
        
          <input class="input" type="text"autocomplete placeholder="firstname" required id="firstname" name="firstname">
          
@@ -240,16 +242,17 @@ const input =document.querySelector(".input")
      const input3 =document.querySelector(".input3")
      const input4=document.querySelector(".input4")
 form.addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent actual form submission
+   // Prevent actual form submission
   popup.style.display = 'flex'; // Show pop-up
-     input.value="";
-     input2.value="";
-     input3.value="";
-     input4.value="";
+    
 });
 
 function closePopup() {
   popup.style.display = 'none';
+     input.value="";
+     input2.value="";
+     input3.value="";
+     input4.value="";
 }
 
 </script>
